@@ -6,5 +6,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  plugins: [require("daisyui")]
+  plugins: [require("daisyui")],
+  
 }

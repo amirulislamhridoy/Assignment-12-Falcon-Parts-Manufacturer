@@ -17,7 +17,7 @@ const Navbar = () => {
         {user ? 
         <li><a onClick={handleSignOut} className='btn btn-outline btn-error'>Sign Out</a></li>
         :
-        <li><Link to="/login">Login</Link></li>
+        <li><Link className='btn btn-outline btn-info' to="/login">Login</Link></li>
         }
     </>
   return (
