@@ -6,36 +6,36 @@ import tayar from "../../images/banner/tayar.jpg";
 const Banner = () => {
   return (
     <section>
-      <div class="carousel w-full " style={{ height: "calc(100vh - 64px)" }}>
-        <div id="slide1" class="carousel-item relative w-full">
-          <img src={tayar} class="w-full" />
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" class="btn btn-circle text-white">
+      <div className="carousel w-full " style={{ height: "calc(100vh - 64px)" }}>
+        <div id="slide1" className="carousel-item relative w-full">
+          <img src={tayar} className="w-full" />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" className="btn btn-circle text-white">
               ❮
             </a>
-            <a href="#slide2" class="btn btn-circle text-white">
+            <a href="#slide2" className="btn btn-circle text-white">
               ❯
             </a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
-          <img src={meter} class="w-full" alt="" />
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" class="btn btn-circle text-white">
+        <div id="slide2" className="carousel-item relative w-full">
+          <img src={meter} className="w-full" alt="" />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" className="btn btn-circle text-white">
               ❮
             </a>
-            <a href="#slide3" class="btn btn-circle text-white">
+            <a href="#slide3" className="btn btn-circle text-white">
               ❯
             </a>
           </div>
         </div>
-        <div id="slide3" class="carousel-item relative w-full">
-          <img src={tayarFrame} class="w-full" alt="" />
-          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" class="btn btn-circle text-white">
+        <div id="slide3" className="carousel-item relative w-full">
+          <img src={tayarFrame} className="w-full" alt="" />
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" className="btn btn-circle text-white">
               ❮
             </a>
-            <a href="#slide1" class="btn btn-circle text-white">
+            <a href="#slide1" className="btn btn-circle text-white">
               ❯
             </a>
           </div>
