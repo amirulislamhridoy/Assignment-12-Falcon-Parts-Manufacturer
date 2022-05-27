@@ -4,14 +4,14 @@ const Parts = () => {
   const [parts, setParts] = useState([]);
   console.log(parts);
   useEffect(() => {
-    fetch("parts.json")
+    fetch("http://localhost:5000/parts")
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, []);
   return (
     <section className="max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center mt-10 mb-4 text-primary">Car Parts </h2>
-      <div className=" grid grid-cols-3 gap-5 mb-20">
+      <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
         {parts.map((part) => (
           <div>
             <div class="card card-compact bg-base-100 shadow-xl">
