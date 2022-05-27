@@ -1,11 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from "../../firebase_init";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
   const onSubmit = (data) => {
-    console.log(data)
+    signInWithEmailAndPassword(data.email, data.password)
   };
   return (
     <div className='flex justify-center items-center'>
