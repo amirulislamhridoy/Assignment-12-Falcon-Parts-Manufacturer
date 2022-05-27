@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Break Pad",
+        "img": "https://i.ibb.co/5rD33yL/engine-piston.jpg",
+        "description": "This is very premium parts. Most of people use This parts. We can speak sure it is very good parts.",
+        "minium": "1000",
+        "maximum": "50000",
+        "price": "500"
+    },
+    {
+        "name": "Battery",
+        "img": "https://i.ibb.co/CWqVx8V/bettery.webp",
+        "description": "This is very premium parts. Most of people use This parts. We can speak sure it is very good parts.",
+        "minium": "700",
+        "maximum": "45000",
+        "price": "1500"
+    },
+    {
+        "name": "Oil Filter",
+        "img": "https://i.ibb.co/3dDx5m3/oil-filter.webp",
+        "description": "This is very premium parts. Most of people use This parts. We can speak sure it is very good parts.",
+        "minium": "800",
+        "maximum": "1000",
+        "price": "250"
+    },
+    {
+        "name": "Shock Absorber",
+        "img": "https://i.ibb.co/88RNR9p/shock-Absorber.webp",
+        "description": "This is very premium parts. Most of people use This parts. We can speak sure it is very good parts.",
+        "minium": "900",
+        "maximum": "60000",
+        "price": "550"
+    },
+    {
+        "name": "Sterring",
+        "img": "https://i.ibb.co/x7Tg0GY/steering.jpg",
+        "description": "This is very premium parts. Most of people use This parts. We can speak sure it is very good parts.",
+        "minium": "500",
+        "maximum": "30000",
+        "price": "2000"
+    },
+    {
+        "name": "Tyre",
+        "img": "https://i.ibb.co/CbCqrgp/tayar.webp",
+        "description": "This is very premium parts. Most of people use This parts. We can speak sure it is very good parts.",
+        "minium": "1500",
+        "maximum": "40000",
+        "price": "2500"
+    }
+]
+
