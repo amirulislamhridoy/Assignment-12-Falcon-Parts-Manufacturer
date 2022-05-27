@@ -1,22 +1,20 @@
 import React from "react";
+import bg from '../../images/factory/factory.jpg'
 
 const Factory = () => {
   return (
     <section>
       <div
         class="hero min-h-screen"
-        style="background-image: url(https://api.lorem.space/image/fashion?w=1000&h=800);"
+        style={{backgroundImage: `url('${bg}')`}}
       >
         <div class="hero-overlay bg-opacity-60"></div>
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-md">
-            <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-            <p class="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            <h1 class="text-red-800 mb-5 text-5xl font-bold">Hello Sir</h1>
+            <p class="mb-5 text-yellow-900 font-bold text-xl">
+              This is our Factory. We are make all parts of automobiles. And we are seller. But we are don't sell single product.
             </p>
-            <button class="btn btn-primary">Get Started</button>
           </div>
         </div>
       </div>

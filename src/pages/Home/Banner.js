@@ -10,10 +10,10 @@ const Banner = () => {
         <div id="slide1" class="carousel-item relative w-full">
           <img src={tayar} class="w-full" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" class="btn btn-circle">
+            <a href="#slide3" class="btn btn-circle text-white">
               ❮
             </a>
-            <a href="#slide2" class="btn btn-circle">
+            <a href="#slide2" class="btn btn-circle text-white">
               ❯
             </a>
           </div>
@@ -21,10 +21,10 @@ const Banner = () => {
         <div id="slide2" class="carousel-item relative w-full">
           <img src={meter} class="w-full" alt="" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" class="btn btn-circle">
+            <a href="#slide1" class="btn btn-circle text-white">
               ❮
             </a>
-            <a href="#slide3" class="btn btn-circle">
+            <a href="#slide3" class="btn btn-circle text-white">
               ❯
             </a>
           </div>
@@ -32,10 +32,10 @@ const Banner = () => {
         <div id="slide3" class="carousel-item relative w-full">
           <img src={tayarFrame} class="w-full" alt="" />
           <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" class="btn btn-circle">
+            <a href="#slide2" class="btn btn-circle text-white">
               ❮
             </a>
-            <a href="#slide1" class="btn btn-circle">
+            <a href="#slide1" class="btn btn-circle text-white">
               ❯
             </a>
           </div>

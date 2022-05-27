@@ -4,8 +4,8 @@ import logo from '../../images/logo/logo.png'
 
 const Navbar = () => {
     const menu = <>
-        <li><Link to="">Item 1</Link></li>
-        <li><Link to="">Item 1</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/login">Login</Link></li>
     </>
   return (
     <div class="navbar bg-base-100">
