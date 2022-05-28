@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../images/logo/logo.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from "../../firebase_init";
@@ -7,9 +7,11 @@ import { signOut } from "firebase/auth";
 
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate()
 
   const handleSignOut = () => {
     signOut(auth)
+    navigate('/login')
   }
 
     const menu = <>

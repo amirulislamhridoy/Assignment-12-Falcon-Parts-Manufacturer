@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Parts = () => {
   const [parts, setParts] = useState([]);
@@ -26,7 +27,7 @@ const Parts = () => {
               <p>Maximum: {part.maximum}</p>
               <h2 className="card-title">Price: {part.price}</h2>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">purchase</button>
+                <Link to={`/purchase/${part._id}`} className="btn btn-primary">purchase</Link>
               </div>
             </div>
           </div>

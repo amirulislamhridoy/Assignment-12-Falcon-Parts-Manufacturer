@@ -1,13 +1,16 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from '../../firebase_init'
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { updateProfile } from "firebase/auth";
-import { toast } from "react-toastify";
+import axios from "axios";
 
 const SingUp = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
     const { register, handleSubmit } = useForm();
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -17,9 +20,21 @@ const SingUp = () => {
 
   const onSubmit = async (data) => {
     const {name, email, password} = data
-    await createUserWithEmailAndPassword(email, password)
-    await updateProfile({ displayName: name });
+    
+      const axiosData = await axios.put(`http://localhost:5000/user/${email}`, {
+      name: name    
+    })
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      await createUserWithEmailAndPassword(email, password)
+    // await updateProfile({ displayName: name});
   };
+
+  let from = location.state?.from?.pathname || "/";
+  if(user || gUser){
+    navigate(from, { replace: true });
+  }
   if(loading){
     return <div className='text-center'>
     <svg role="status" className="inline w-10 h-10 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +44,7 @@ const SingUp = () => {
   </div>
   }
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center flex-col">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="card w-full max-w-sm shadow-2xl bg-base-100 px-8 pb-10 pt-14"
@@ -75,6 +90,14 @@ const SingUp = () => {
         <h3 className='text-red-500 font-bold'>{error?.message}</h3>
         <input className="btn btn-primary" type="submit" value="Sign Up" />
       </form>
+      <div className='card w-full max-w-sm shadow-2xl bg-base-100 px-8 pb-4 pt-4 mt-4'>
+        <button
+          onClick={() => signInWithGoogle()}
+          className="btn btn-warning "
+        >
+          Google With Login
+        </button>
+      </div>
     </div>
   );
 };

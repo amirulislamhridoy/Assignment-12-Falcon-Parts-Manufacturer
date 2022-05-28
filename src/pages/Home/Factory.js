@@ -11,8 +11,8 @@ const Factory = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="text-red-800 mb-5 text-5xl font-bold">Hello Sir</h1>
-            <p className="mb-5 text-yellow-900 font-bold text-xl">
+            <h1 className="text-accent mb-5 text-5xl font-bold">Hello Sir</h1>
+            <p className="mb-5 text-accent font-bold text-xl">
               This is our Factory. We are make all parts of automobiles. And we are seller. But we are don't sell single product.
             </p>
           </div>
