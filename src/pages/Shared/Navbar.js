@@ -8,7 +8,7 @@ import { signOut } from "firebase/auth";
 const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate()
-
+// console.log(user)
   const handleSignOut = () => {
     signOut(auth)
     navigate('/login')
@@ -16,6 +16,10 @@ const Navbar = () => {
 
     const menu = <>
         <li><Link to="/">Home</Link></li>
+        <li><Link to="/myOrders">My orders</Link></li>
+        <li><Link to="/addAReview">Add a Review</Link></li>
+        <li><Link to="/myProfile">My Profile</Link></li>
+
         {user ? 
         <li><a onClick={handleSignOut} className='btn btn-outline btn-error'>Sign Out</a></li>
         :

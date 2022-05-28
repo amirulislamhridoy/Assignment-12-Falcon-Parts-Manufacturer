@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from '../../firebase_init'
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { updateProfile } from "firebase/auth";
-import axios from "axios";
+import { useUpdateProfile } from 'react-firebase-hooks/auth';
 
 const SingUp = () => {
   const navigate = useNavigate()
   const location = useLocation()
+  const [updateProfile, updating] = useUpdateProfile(auth);
     const { register, handleSubmit } = useForm();
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [
@@ -20,15 +20,9 @@ const SingUp = () => {
 
   const onSubmit = async (data) => {
     const {name, email, password} = data
-    
-      const axiosData = await axios.put(`http://localhost:5000/user/${email}`, {
-      name: name    
-    })
-      // .then(function (response) {
-      //   console.log(response);
-      // })
+
       await createUserWithEmailAndPassword(email, password)
-    // await updateProfile({ displayName: name});
+      await updateProfile({ displayName: name});
   };
 
   let from = location.state?.from?.pathname || "/";
