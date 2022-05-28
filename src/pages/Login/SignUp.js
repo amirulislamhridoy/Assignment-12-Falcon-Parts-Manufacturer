@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from '../../firebase_init'
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useUpdateProfile } from 'react-firebase-hooks/auth';
+import axios from "axios";
 
 const SingUp = () => {
   const navigate = useNavigate()
@@ -23,9 +24,15 @@ const SingUp = () => {
 
       await createUserWithEmailAndPassword(email, password)
       await updateProfile({ displayName: name});
+      
+      const my = await axios.put(`http://localhost:5000/user?email=${email}`, {
+        name: name,
+        email: email
+      })
   };
 
   let from = location.state?.from?.pathname || "/";
+
   if(user || gUser){
     navigate(from, { replace: true });
   }

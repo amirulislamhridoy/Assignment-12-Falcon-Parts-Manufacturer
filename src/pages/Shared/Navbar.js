@@ -16,9 +16,7 @@ const Navbar = () => {
 
     const menu = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/myOrders">My orders</Link></li>
-        <li><Link to="/addAReview">Add a Review</Link></li>
-        <li><Link to="/myProfile">My Profile</Link></li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
 
         {user ? 
         <li><a onClick={handleSignOut} className='btn btn-outline btn-error'>Sign Out</a></li>
