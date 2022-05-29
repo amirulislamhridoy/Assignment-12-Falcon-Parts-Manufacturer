@@ -1,9 +1,17 @@
 import React from "react";
+import { toast } from "react-toastify";
 
-const ManageAllOrdersModal = ({deleteOrder, setDeleteOrder}) => {
+const ManageAllOrdersModal = ({deleteOrder, setDeleteOrder, refetch}) => {
     const handleDelete = parts => {
-        // console.log(parts)
-        setDeleteOrder('')
+
+        fetch(`http://localhost:5000/order/${parts._id}`, {method: 'DELETE'})
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          setDeleteOrder('')
+          toast.success('You are delete a Parts.')
+          refetch()
+        })
     }
   return (
     <div>
