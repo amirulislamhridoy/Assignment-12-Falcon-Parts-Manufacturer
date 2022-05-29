@@ -6,6 +6,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import auth from "../../firebase_init";
+import useToken from "../../hook/useToken";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -14,6 +15,7 @@ const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
+  const [token] = useToken(user || gUser)
 
   const from = location.state?.from?.pathname || "/";
 
@@ -58,7 +60,8 @@ const Login = () => {
       </div>
     );
   }
-  if (user || gUser) {
+  console.log(token)
+  if (token) {
     navigate(from, { replace: true });
   }
   return (

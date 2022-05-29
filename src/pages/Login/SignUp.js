@@ -8,6 +8,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { useUpdateProfile } from "react-firebase-hooks/auth";
 import axios from "axios";
+import useToken from "../../hook/useToken";
 
 const SingUp = () => {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const SingUp = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [token] = useToken(user || gUser)
 
   const onSubmit = async (data) => {
     const { name, email, password } = data;
@@ -47,7 +49,7 @@ const SingUp = () => {
 
   let from = location.state?.from?.pathname || "/";
 
-  if (user || gUser) {
+  if (token) {
     navigate(from, { replace: true });
   }
   if (loading) {
