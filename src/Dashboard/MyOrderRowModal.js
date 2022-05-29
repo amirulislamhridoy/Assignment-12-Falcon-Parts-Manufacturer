@@ -13,10 +13,16 @@ const MyOrderRowModal = ({perOrder, refetch, setPerOrder}) => {
             setPerOrder('')
         })
     }
+    console.log(perOrder)
   return (
     <div class="modal" id="ordermodal">
       <div class="modal-box">
         <h3 class="font-bold text-lg">Are you sure to delete. {perOrder.orderName}</h3>
+        {/* <div class="avatar">
+            <div class="w-24 mask mask-squircle">
+            <img src={perOrder.img} alt="" />
+            </div>
+          </div> */}
         <div class="modal-action">
             <button onClick={() => handleDelete(perOrder)} className='btn btn-error text-white'>Delete</button>
           <a href="#" class="btn">

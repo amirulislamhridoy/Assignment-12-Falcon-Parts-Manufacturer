@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import ManageProductModal from "./ManageProductModal";
 
 const ManageProducts = () => {
-    const [deletePrats, setDeleteParts] = useState({})
+    const [deleteParts, setDeleteParts] = useState({})
   const { isLoading, error, data, refetch } = useQuery("repoData", () =>
     fetch("http://localhost:5000/parts/").then((res) => res.json())
   );
@@ -60,7 +60,7 @@ const ManageProducts = () => {
           </tbody>
         </table>
       </div>
-        {deletePrats && <ManageProductModal refetch={refetch} deletePrats={deletePrats} setDeleteParts={setDeleteParts}></ManageProductModal>}
+        {deleteParts && <ManageProductModal refetch={refetch} deleteParts={deleteParts} setDeleteParts={setDeleteParts}></ManageProductModal>}
     </div>
   );
 };

@@ -17,7 +17,7 @@ const Dashboard = () => {
           {/* type your content */}
           <label
             for="my-drawer-2"
-            class=" btn btn-primary drawer-button lg:hidden ml-8"
+            class=" btn btn-primary btn-sm drawer-button lg:hidden ml-8"
           >
             Open Side Menu
           </label>
