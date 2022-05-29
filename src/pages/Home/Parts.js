@@ -5,7 +5,7 @@ const Parts = () => {
   const [parts, setParts] = useState([]);
   // console.log(parts);
   useEffect(() => {
-    fetch("http://localhost:5000/parts")
+    fetch("https://work-wk4e.onrender.com/parts")
       .then((res) => res.json())
       .then((data) => setParts(data));
   }, []);

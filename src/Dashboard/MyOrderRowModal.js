@@ -3,7 +3,7 @@ import React from "react";
 const MyOrderRowModal = ({perOrder, refetch, setPerOrder}) => {
 
     const handleDelete = order => {
-        fetch(`http://localhost:5000/order/${order._id}`, {
+        fetch(`https://work-wk4e.onrender.com/order/${order._id}`, {
             method: 'DELETE',
         })
         .then(res => res.json())

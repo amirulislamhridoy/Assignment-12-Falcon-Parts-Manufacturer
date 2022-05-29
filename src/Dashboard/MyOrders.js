@@ -14,7 +14,7 @@ const MyOrders = () => {
     data: orders,
     refetch,
   } = useQuery(["repoData", user], () =>
-    fetch(`http://localhost:5000/order?email=${user?.email}`,{
+    fetch(`https://work-wk4e.onrender.com/order?email=${user?.email}`,{
       headers :{
         authorization: "Bearer " + localStorage.getItem('accessToken')
       }

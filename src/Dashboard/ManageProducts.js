@@ -5,7 +5,7 @@ import ManageProductModal from "./ManageProductModal";
 const ManageProducts = () => {
     const [deleteParts, setDeleteParts] = useState({})
   const { isLoading, error, data, refetch } = useQuery("repoData", () =>
-    fetch("http://localhost:5000/parts/").then((res) => res.json())
+    fetch("https://work-wk4e.onrender.com/parts/").then((res) => res.json())
   );
 
   const handleDeleteParts = (e) => {

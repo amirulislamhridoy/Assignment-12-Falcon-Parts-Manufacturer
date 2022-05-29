@@ -2,7 +2,7 @@ import React from "react";
 
 const ManageProductModal = ({ deleteParts, setDeleteParts, refetch }) => {
   const handleDelete = (parts) => {
-    fetch(`http://localhost:5000/parts/${parts._id}`, { method: "DELETE" })
+    fetch(`https://work-wk4e.onrender.com/parts/${parts._id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState({})
 
     const { isLoading, error, data: orders, refetch } = useQuery('orders', () =>
-     fetch('http://localhost:5000/orders').then(res =>
+     fetch('https://work-wk4e.onrender.com/orders').then(res =>
        res.json()
      )
    )

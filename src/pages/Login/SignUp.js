@@ -23,7 +23,7 @@ const SingUp = () => {
   const onSubmit = async (data) => {
     const { name, email, password } = data;
 
-    const my = await axios.put(`http://localhost:5000/user?email=${email}`, {
+    const my = await axios.put(`https://work-wk4e.onrender.com/user?email=${email}`, {
       name: name,
       email: email,
     });
@@ -33,7 +33,7 @@ const SingUp = () => {
   };
 // console.log(gUser)
   useEffect(() => {
-    fetch(`http://localhost:5000/user?email=${gUser?.user?.email}`, {
+    fetch(`https://work-wk4e.onrender.com/user?email=${gUser?.user?.email}`, {
       method: "PUT",
       body: JSON.stringify({
         name: gUser?.user?.displayName,

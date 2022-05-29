@@ -28,7 +28,7 @@ const AddAProduct = () => {
         const imgLink = data.data.url;
         parts.img = imgLink
 
-        fetch(`http://localhost:5000/parts`, {
+        fetch(`https://work-wk4e.onrender.com/parts`, {
           method: "POST",
           body: JSON.stringify(parts),
           headers: {

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const ManageAllOrdersModal = ({deleteOrder, setDeleteOrder, refetch}) => {
     const handleDelete = parts => {
 
-        fetch(`http://localhost:5000/order/${parts._id}`, {method: 'DELETE'})
+        fetch(`https://work-wk4e.onrender.com/order/${parts._id}`, {method: 'DELETE'})
         .then(res => res.json())
         .then(data => {
           console.log(data)

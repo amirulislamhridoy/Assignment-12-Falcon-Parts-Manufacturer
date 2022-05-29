@@ -20,7 +20,7 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user?email=${gUser?.user?.email}`, {
+    fetch(`https://work-wk4e.onrender.com/user?email=${gUser?.user?.email}`, {
       method: "PUT",
       body: JSON.stringify({
         name: gUser?.user?.displayName,

@@ -3,7 +3,7 @@ import {  useQuery } from 'react-query'
 
 const Reviews = () => {
     const { isLoading, error, data } = useQuery('repoData', () =>
-     fetch('http://localhost:5000/review').then(res =>
+     fetch('https://work-wk4e.onrender.com/review').then(res =>
        res.json()
      )
    )

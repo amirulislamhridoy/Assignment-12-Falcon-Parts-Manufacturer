@@ -9,7 +9,7 @@ const AddAReview = () => {
     const ratings = e.target.ratings.value;
     const rate = {name: name, description, ratings}
 
-    fetch("http://localhost:5000/review", {
+    fetch("https://work-wk4e.onrender.com/review", {
       method: "POST",
       body: JSON.stringify(rate),
       headers: {

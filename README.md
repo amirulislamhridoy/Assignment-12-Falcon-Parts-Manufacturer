@@ -1,3 +1,13 @@
+# LIVE site [https://lucky-churros-894c37.netlify.app/](https://lucky-churros-894c37.netlify.app/)
+
+ * firebase
+ * email-password authentication
+  * mongodb atlas
+  * private route 
+  * admin
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
