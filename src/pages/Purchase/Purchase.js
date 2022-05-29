@@ -9,8 +9,12 @@ const Purchase = () => {
   const { id } = useParams();
   const [user, loading, uError] = useAuthState(auth);
   const [quantity, setQuantity] = useState("");
-  const { isLoading, error, data } = useQuery("parts", () =>
-    fetch(`http://localhost:5000/parts/${id}`).then((res) => res.json())
+  const { isLoading, error, data } = useQuery(["parts", user], () =>
+    fetch(`http://localhost:5000/parts/${id}?email=${user?.email}`, {
+      headers: {
+        authorization: "Bearer " + localStorage.getItem("accessToken")
+      }
+    }).then((res) => res.json())
   );
 // console.log(data)
   let [quantityError, setQuantityError] = useState("");

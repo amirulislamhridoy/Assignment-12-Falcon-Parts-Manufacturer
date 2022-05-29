@@ -61,7 +61,7 @@ const AddAReview = () => {
               <span class="label-text">Ratings</span>
             </label>
             <input
-              type="number"
+              type="text"
               placeholder="Ratings"
               class="input input-bordered"
               name="ratings"

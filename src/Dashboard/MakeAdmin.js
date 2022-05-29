@@ -1,14 +1,22 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { toast } from "react-toastify";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../firebase_init";
 
 const MakeAdmin = () => {
+  const [user, loading] = useAuthState(auth);
+  // console.log(user)
   const {
     isLoading,
     error,
     data: users, refetch
-  } = useQuery("repoData", () =>
-    fetch("http://localhost:5000/user").then((res) => res.json())
+  } = useQuery(["repoData", user], () =>
+    fetch(`http://localhost:5000/user?email=${user?.email}`,{
+      headers :{
+        authorization: "Bearer " + localStorage.getItem('accessToken')
+      }
+    }).then((res) => res.json())
   );
   const handleMakeAdmin = (user) => {
     console.log(user);

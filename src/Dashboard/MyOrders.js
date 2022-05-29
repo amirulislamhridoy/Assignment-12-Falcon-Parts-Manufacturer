@@ -14,7 +14,11 @@ const MyOrders = () => {
     data: orders,
     refetch,
   } = useQuery("repoData", () =>
-    fetch(`http://localhost:5000/order?email=${user.email}`).then((res) =>
+    fetch(`http://localhost:5000/order?email=${user?.email}`,{
+      headers :{
+        authorization: "Bearer " + localStorage.getItem('accessToken')
+      }
+    }).then((res) =>
       res.json()
     )
   );
