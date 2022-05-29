@@ -60,13 +60,13 @@ const MyPortfolio = () => {
                   <th>HTML</th>
                 </tr>
                 <tr>
-                  <th>HTML5</th>
+                  <th>HTML-5</th>
                 </tr>
                 <tr>
                   <th>CSS</th>
                 </tr>
                 <tr>
-                  <th>CSS3</th>
+                  <th>CSS-3</th>
                 </tr>
                 <tr>
                   <th>GitHub</th>
@@ -104,18 +104,18 @@ const MyPortfolio = () => {
         </div>
       </div>
       <div className='mt-6'>
-        <h2 className="text-2xl">My Live website Link</h2>
+        <h2 className="text-2xl">My Some Live Website Link</h2>
         <p>
           Bike Warehouse <a className='text-blue-700' href="https://velvety-entremet-267826.netlify.app/"
             target="_blanck">https://velvety-entremet-267826.netlify.app/</a>
         </p>
         <p>
-          Saja <a className='text-blue-700' href="https://jocular-crepe-b537ed.netlify.app/"
-            target="_blanck">https://jocular-crepe-b537ed.netlify.app/</a>
+          Dr. Luke Slater <a className='text-blue-700' href="https://assignment-10-doctor-1d2b0.web.app/"
+            target="_blanck">https://assignment-10-doctor-1d2b0.web.app/</a>
         </p>
         <p>
-          Falcon Hall <a className='text-blue-700' href="https://competent-albattani-6a12df.netlify.app/"
-            target="_blanck">https://competent-albattani-6a12df.netlify.app/</a>
+          Saja <a className='text-blue-700' href="https://jocular-crepe-b537ed.netlify.app/"
+            target="_blanck">https://jocular-crepe-b537ed.netlify.app/</a>
         </p>
       </div>
     </div>

@@ -32,12 +32,13 @@ const Purchase = () => {
     e.preventDefault();
     const orderName= data.name;
     const img = data.img;
+    const price = data.price;
     const name = user.displayName;
     const email = user.email;
     const address = e.target.address.value;
     const number = e.target.number.value
     if (quantityError.length < 2) {
-      const orderDetail = {orderName, img, name, email, address, number, quantity}
+      const orderDetail = {orderName, img, price, name, email, address, number, quantity}
     
       fetch("http://localhost:5000/order", {
         method: "POST",
