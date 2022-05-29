@@ -17,6 +17,9 @@ import ManageAllOrders from "./Dashboard/ManageAllOrders";
 import AddAProduct from "./Dashboard/AddAProduct";
 import MakeAdmin from "./Dashboard/MakeAdmin";
 import ManageProducts from "./Dashboard/ManageProducts";
+import MyPortfolio from "./MyPortfolio/MyPortfolio";
+import Blogs from "./Blogs/Blogs";
+import NotFound from "./NotFound/NotFound";
 
 
 function App() {
@@ -40,9 +43,12 @@ function App() {
             <Purchase></Purchase>
         </RequireAuth>} />
         
+        <Route path="/myPortfolio" element={<MyPortfolio />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer></Footer>
       <ToastContainer />

@@ -8,9 +8,9 @@ const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
 
   const [admin] = useAdmin(user);
-  // console.log(admin)
+  // console.log(admin);
   return (
-    <div className=''>
+    <div className="">
       <div class="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
@@ -32,28 +32,28 @@ const Dashboard = () => {
             <li>
               <Link to="/dashboard">My Profile</Link>
             </li>
-            {!admin ? (
+            {admin ? (
+              <>
+                <li>
+                  <Link to="/dashboard/makeAdmin">Make Admin</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard/addAProduct">Add A Product</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard/manageProducts">Manage Products</Link>
+                </li>
+                <li>
+                  <Link to="/dashboard/manageAddOrders">Manage All Orders</Link>
+                </li>
+              </>
+            ) : (
               <>
                 <li>
                   <Link to="/dashboard/myOrders">My Orders</Link>
                 </li>
                 <li>
                   <Link to="/dashboard/addAReview">Add A Review</Link>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <Link to="/dashboard/manageAddOrders">Manage All Orders</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/addAProduct">Add A Product</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/makeAdmin">Make Admin</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/manageProducts">Manage Products</Link>
                 </li>
               </>
             )}

@@ -10,8 +10,8 @@ const useAdmin = ( user ) => {
       if(email){
         axios.get(`http://localhost:5000/admin/${email}`)
         .then(res => {
-            // console.log(res.data)
-            setAdmin(res.data)
+            // console.log(res.data.admin)
+            setAdmin(res.data.admin)
         })
       }
   }, [user]);

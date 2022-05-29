@@ -1,8 +1,14 @@
 import React from "react";
 
-const ManageProductModal = ({deletePrats}) => {
+const ManageProductModal = ({deletePrats, setDeleteParts, refetch}) => {
     const handleDelete = parts => {
-        
+        fetch(`http://localhost:5000/parts/${parts._id}`, {method: 'DELETE'})
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            setDeleteParts('')
+            refetch()
+        })
     }
     
   return (
