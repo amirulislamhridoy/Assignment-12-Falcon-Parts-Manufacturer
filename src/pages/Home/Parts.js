@@ -24,7 +24,7 @@ const Parts = () => {
               <h2 className="text-2xl font-bold">{part.name}</h2>
               <p>{part.description}</p>
               <p>Minium: {part.minium}</p>
-              <p>Maximum: {part.maximum}</p>
+              <p>Available: {part.maximum}</p>
               <h2 className="card-title">Price: {part.price}</h2>
               <div className="card-actions justify-end">
                 <Link to={`/purchase/${part._id}`} className="btn btn-primary">purchase</Link>

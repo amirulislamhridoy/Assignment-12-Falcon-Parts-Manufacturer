@@ -75,12 +75,12 @@ const AddAProduct = () => {
           </div>
           <div class="form-control">
             <label class="label">
-              <span class="label-text">Maximum Quantity</span>
+              <span class="label-text">Available Quantity</span>
             </label>
             <input
               {...register("maximum")}
               type="number"
-              placeholder="Maximum Quantity"
+              placeholder="Available Quantity"
               class="input input-bordered"
             />
           </div>

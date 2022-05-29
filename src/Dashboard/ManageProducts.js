@@ -22,7 +22,7 @@ const ManageProducts = () => {
               <th></th>
               <th>Name</th>
               <th></th>
-              <th>Maximum Quantity</th>
+              <th>Available Quantity</th>
               <th>Minium Quantity</th>
               <th>Price</th>
               <th></th>

@@ -12,7 +12,7 @@ const Purchase = () => {
   const { isLoading, error, data } = useQuery("parts", () =>
     fetch(`http://localhost:5000/parts/${id}`).then((res) => res.json())
   );
-  // console.log(data)
+// console.log(data)
   let [quantityError, setQuantityError] = useState("");
   const handleQuantity = (e) => {
     let value = +e.target.value;
@@ -26,7 +26,6 @@ const Purchase = () => {
     } else {
       setQuantityError("");
     }
-    // console.log(quantityError)
     setQuantity(value);
   };
   const handleFromSubmit = (e) => {
@@ -36,8 +35,7 @@ const Purchase = () => {
     const name = user.displayName;
     const email = user.email;
     const address = e.target.address.value;
-    const number = e.target.number.value;
-// console.log(data)
+    const number = e.target.number.value
     if (quantityError.length < 2) {
       const orderDetail = {orderName, img, name, email, address, number, quantity}
     
@@ -115,7 +113,7 @@ const Purchase = () => {
             </label>
             <input
               type="number"
-              placeholder="Quantity"
+              placeholder="Phone Number"
               class="input input-bordered"
               name="number"
               required
@@ -128,7 +126,8 @@ const Purchase = () => {
             <input
               onChange={(e) => handleQuantity(e)}
               type="number"
-              placeholder="Quantity"
+              placeholder={`This parts minium quantity is ${data.minium}`}
+              // defaultValue={`${data.minium}`}
               class="input input-bordered"
               name="quantity"
               required

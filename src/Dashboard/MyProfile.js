@@ -15,11 +15,11 @@ const MyProfile = () => {
       const location = e.target.location.value
       const linkedin = e.target.linkedin.value
       const gender = e.target.gender.value 
+      const phone = e.target.phone.value
 
-    const data = {name, email, education, location, linkedin, gender}
+    const data = {name, email, phone, education, location, linkedin, gender}
     
-    
-    axios.put(`http://localhost:5000/user?email=${email}`, {name, email, education, location, linkedin, gender} )
+    axios.put(`http://localhost:5000/user?email=${email}`, {name, email, phone, education, location, linkedin, gender} )
     .then(res => {
         console.log(res)
         toast.success('Your profile is update.')
@@ -53,6 +53,16 @@ const MyProfile = () => {
               class="input input-bordered"
               value={user?.email}
               disabled
+            />
+            <label class="label" htmlFor="education">
+              <span class="label-text">Phone Number</span>
+            </label>
+            <input
+              id="education"
+              type="text"
+              placeholder="Phone Number"
+              class="input input-bordered"
+              name="phone"
             />
             <label class="label" htmlFor="education">
               <span class="label-text">Education</span>

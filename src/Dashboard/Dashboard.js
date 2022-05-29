@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
 
   const [admin] = useAdmin(user);
-  // console.log(admin);
+  // console.log(user);
   return (
     <div className="">
       <div class="drawer drawer-mobile">

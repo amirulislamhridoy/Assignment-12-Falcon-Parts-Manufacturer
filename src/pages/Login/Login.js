@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -16,6 +16,21 @@ const Login = () => {
   const navigate = useNavigate();
 
   const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/user?email=${gUser?.user?.email}`, {
+      method: "PUT",
+      body: JSON.stringify({
+        name: gUser?.user?.displayName,
+        email: gUser?.user?.email
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }, [gUser]);
 
   const onSubmit = (data) => {
     signInWithEmailAndPassword(data.email, data.password);
