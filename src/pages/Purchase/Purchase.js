@@ -10,7 +10,7 @@ const Purchase = () => {
   const [user, loading, uError] = useAuthState(auth);
   const [quantity, setQuantity] = useState("");
   const { isLoading, error, data } = useQuery(["parts", user], () =>
-    fetch(`https://work-wk4e.onrender.com/parts/${id}?email=${user?.email}`, {
+    fetch(`https://falcon-parts-manufatures.herokuapp.com/parts/${id}?email=${user?.email}`, {
       headers: {
         authorization: "Bearer " + localStorage.getItem("accessToken")
       }
@@ -44,7 +44,7 @@ const Purchase = () => {
     if (quantityError.length < 2) {
       const orderDetail = {orderName, img, price, name, email, address, number, quantity}
     
-      fetch("https://work-wk4e.onrender.com/order", {
+      fetch("https://falcon-parts-manufatures.herokuapp.com/order", {
         method: "POST",
         body: JSON.stringify(orderDetail),
         headers: {

@@ -9,7 +9,7 @@ const AddAReview = () => {
     const ratings = e.target.ratings.value;
     const rate = {name: name, description, ratings}
 
-    fetch("https://work-wk4e.onrender.com/review", {
+    fetch("https://falcon-parts-manufatures.herokuapp.com/review", {
       method: "POST",
       body: JSON.stringify(rate),
       headers: {

@@ -8,7 +8,7 @@ const useAdmin = ( user ) => {
       const email = user?.email
 
       if(email){
-        axios.get(`https://work-wk4e.onrender.com/admin/${email}`)
+        axios.get(`https://falcon-parts-manufatures.herokuapp.com/admin/${email}`)
         .then(res => {
             // console.log(res.data.admin)
             setAdmin(res.data.admin)

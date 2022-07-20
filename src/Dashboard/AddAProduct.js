@@ -28,7 +28,7 @@ const AddAProduct = () => {
         const imgLink = data.data.url;
         parts.img = imgLink
 
-        fetch(`https://work-wk4e.onrender.com/parts`, {
+        fetch(`https://falcon-parts-manufatures.herokuapp.com/parts`, {
           method: "POST",
           body: JSON.stringify(parts),
           headers: {

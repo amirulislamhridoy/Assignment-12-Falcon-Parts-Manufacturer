@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     error,
     data: users, refetch
   } = useQuery(["repoData", user], () =>
-    fetch(`https://work-wk4e.onrender.com/user?email=${user?.email}`,{
+    fetch(`https://falcon-parts-manufatures.herokuapp.com/user?email=${user?.email}`,{
       headers :{
         authorization: "Bearer " + localStorage.getItem('accessToken')
       }
@@ -21,7 +21,7 @@ const MakeAdmin = () => {
   const handleMakeAdmin = (user) => {
     console.log(user);
 
-    fetch(`https://work-wk4e.onrender.com/user/${user._id}`, {
+    fetch(`https://falcon-parts-manufatures.herokuapp.com/user/${user._id}`, {
       method: "PUT",
       body: JSON.stringify(),
       headers: {

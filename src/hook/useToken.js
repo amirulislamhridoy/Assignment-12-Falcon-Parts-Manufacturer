@@ -6,7 +6,7 @@ console.log(user)
     useEffect(() => {
         const email = user?.user?.email
         if(email){
-            fetch(`https://work-wk4e.onrender.com/token?email=${email}`)
+            fetch(`https://falcon-parts-manufatures.herokuapp.com/token?email=${email}`)
             .then(res => res.json())
             .then(data => {
                 localStorage.setItem('accessToken', data.token)

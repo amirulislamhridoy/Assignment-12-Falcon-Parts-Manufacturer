@@ -19,7 +19,7 @@ const MyProfile = () => {
 
     const data = {name, email, phone, education, location, linkedin, gender}
     
-    axios.put(`https://work-wk4e.onrender.com/user?email=${email}`, {name, email, phone, education, location, linkedin, gender} )
+    axios.put(`https://falcon-parts-manufatures.herokuapp.com/user?email=${email}`, {name, email, phone, education, location, linkedin, gender} )
     .then(res => {
         console.log(res)
         toast.success('Your profile is update.')

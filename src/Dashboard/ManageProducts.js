@@ -5,7 +5,7 @@ import ManageProductModal from "./ManageProductModal";
 const ManageProducts = () => {
     const [deleteParts, setDeleteParts] = useState({})
   const { isLoading, error, data, refetch } = useQuery("repoData", () =>
-    fetch("https://work-wk4e.onrender.com/parts/").then((res) => res.json())
+    fetch("https://falcon-parts-manufatures.herokuapp.com/parts/").then((res) => res.json())
   );
 
   const handleDeleteParts = (e) => {

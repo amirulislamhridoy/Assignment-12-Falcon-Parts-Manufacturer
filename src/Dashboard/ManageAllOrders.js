@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
     const [deleteOrder, setDeleteOrder] = useState({})
 
     const { isLoading, error, data: orders, refetch } = useQuery('orders', () =>
-     fetch('https://work-wk4e.onrender.com/orders').then(res =>
+     fetch('https://falcon-parts-manufatures.herokuapp.com/orders').then(res =>
        res.json()
      )
    )
